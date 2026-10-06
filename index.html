@@ -33,7 +33,26 @@ h1{font-size:64px;margin:15px 0 4px;letter-spacing:3px} h2{margin:0 0 8px} p{col
 @media(max-width:850px){.ad-link,.ad-img{min-height:160px}.ad-img{max-height:260px}}
 
 </style>
-</head>
+<style>
+/* Reference-layout correction */
+html,body{background:#020912!important}
+body:before,body:after{display:none!important}
+.wrap{width:min(1400px,100%)!important;margin:0 auto!important;padding:0 0 42px!important;background:#020912}
+.hero{min-height:405px!important;border:0!important;border-radius:0!important;padding:32px 42px!important;align-items:flex-end!important;background:
+linear-gradient(90deg,rgba(1,8,16,.30) 0%,rgba(1,8,16,.08) 48%,rgba(1,8,16,.03) 72%),
+linear-gradient(0deg,#020912 0%,transparent 30%),
+url("https://holod-2026.angel202490.workers.dev/holod-bg.png") center top/cover no-repeat!important;box-shadow:none!important}
+.heroText{max-width:500px!important}.hero h1{font-size:76px!important;line-height:.9!important;margin:8px 0 12px!important;text-shadow:0 3px 16px #000}
+.hero h2{font-size:24px!important}.hero p{margin:7px 0 14px!important;color:#d6e0e8!important}
+.grid{grid-template-columns:2.45fr 1.15fr!important;gap:12px!important;margin:0 42px!important}
+.player{height:370px!important;aspect-ratio:auto!important;border-radius:8px!important}
+.playerBg{background:linear-gradient(rgba(1,9,17,.28),rgba(1,9,17,.48)),url("https://holod-2026.angel202490.workers.dev/holod-bg.png") center 72%/cover no-repeat!important}
+.side{height:370px!important;padding:13px!important;border-radius:8px!important}.eps{gap:8px!important}.ep{height:66px!important;padding:8px!important}
+.infoRow{grid-template-columns:1fr 1fr!important;gap:12px!important;margin:12px 42px 0!important}.info,.ad{min-height:190px!important;border-radius:8px!important}
+.info{position:relative;padding-left:205px!important}.info:before{content:"";position:absolute;left:14px;top:14px;bottom:14px;width:175px;border-radius:7px;background:url("https://holod-2026.angel202490.workers.dev/holod-bg.png") 68% 28%/cover no-repeat}
+.ad-live{min-height:190px!important}.paid{margin:0 42px}
+@media(max-width:850px){.wrap{width:100%!important}.hero{padding:24px 18px!important;min-height:360px!important}.grid,.infoRow{margin-left:10px!important;margin-right:10px!important;grid-template-columns:1fr!important}.player,.side{height:auto!important;min-height:340px!important}.info{padding:14px!important;padding-top:200px!important}.info:before{left:14px;right:14px;top:14px;width:auto;height:170px;bottom:auto}.paid{margin:0 10px}}
+</style></head>
 <body>
 <main class="wrap">
 <section class="hero">
