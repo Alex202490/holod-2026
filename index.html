@@ -1,6 +1,172 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Холод — 2026 · Сезон 1</title><link rel="stylesheet" href="style.css"></head><body>
-<header><a class="logo">Х▶ЛОД</a><nav><b>⌂ Главная</b><span>▣ Фильмы</span><span>▤ Сериалы</span><span>♡ Мой список</span></nav><div class="search">Поиск фильмов, сериалов…　⌕</div></header>
-<main><section class="hero"><div class="heroText"><div class="ice">ХОЛОД</div><div class="badges"><i>2026</i><i>Сериал</i><i>1 сезон</i><i>4K</i></div><h1>Первый сезон · Все серии</h1><p>Криминальная драма о женщине, потерявшей семью и решившей добиться справедливости. Личная месть переплетается с психологической игрой, опасными связями и тайнами.</p><button data-pay>▶ Смотреть первый сезон за 50 ₽</button></div></section>
-<section class="watch"><div class="player" id="player"><div class="locked"><div class="lock">🔒</div><small>ХОЛОД · 1 СЕЗОН</small><h2>Все серии сезона</h2><p>Единоразовая оплата открывает доступ ко всем сериям первого сезона.</p><strong>50 ₽</strong><button data-pay>Оплатить первый сезон</button></div></div><aside><div class="sideHead"><div><h2>Холод · Сезон 1</h2><small>Все серии</small></div><em>🔒 Требуется доступ</em></div><div id="episodes" class="episodes"></div></aside></section>
-<section class="lower"><article class="about"><div class="aboutImg"></div><div><h2>О сериале</h2><p>«Холод» — российская криминальная драма 2026 года с элементами психологического триллера. После трагической автокатастрофы Женя теряет мужа и дочь, а ответственность за случившееся ложится на неё. После колонии она начинает тщательно продуманный путь к возмездию.</p><div class="chips"><i>Драма</i><i>Триллер</i><i>Криминал</i><i>Детектив</i></div></div></article><article class="ad"><small>РЕКЛАМА</small><h2>Здесь будет ваша реклама</h2><p>Место для рекламного баннера, партнёрского предложения или собственного промо.</p><button>Подробнее</button></article></section></main>
-<footer>ХОЛОД · 2026　 <span>Главная　Все серии　О сериале　Правила　Контакты</span></footer><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Холод — 1 сезон, все серии</title>
+<script src="https://graphicslab.io/sdk/v2/rendex-sdk.min.js" async></script>
+<script src="https://alt.graphicslab.io/sdk/v2/rendex-sdk.min.js" async></script>
+<style>
+*{box-sizing:border-box} body{margin:0;background:#020912;color:#eef7ff;font-family:Arial,Helvetica,sans-serif}
+body:before{content:"";position:fixed;inset:0;background:linear-gradient(180deg,rgba(1,8,16,.18),#020912 68%),url("https://holod-2026.angel202490.workers.dev/holod-bg.png") top center/cover no-repeat;z-index:-2}
+body:after{content:"";position:fixed;inset:0;background:rgba(0,10,20,.28);backdrop-filter:blur(1px);z-index:-1}
+.wrap{width:min(1400px,94%);margin:auto;padding:34px 0 60px}
+.hero{min-height:440px;display:flex;align-items:flex-end;padding:34px;border:1px solid #31516c;border-radius:22px;background:linear-gradient(90deg,rgba(0,8,17,.88),rgba(0,8,17,.30),rgba(0,8,17,.05));box-shadow:0 20px 70px #000}
+.heroText{max-width:610px}.tags{display:flex;gap:8px;flex-wrap:wrap}.tag,.badge{border:1px solid #57738a;background:#071725cc;border-radius:7px;padding:6px 10px;font-size:13px}
+h1{font-size:64px;margin:15px 0 4px;letter-spacing:3px} h2{margin:0 0 8px} p{color:#b8c7d5;line-height:1.55}
+.btn{border:0;border-radius:11px;padding:15px 24px;font-weight:800;font-size:16px;cursor:pointer;color:white;background:linear-gradient(#21a9ff,#0074c8);box-shadow:0 8px 30px #008be744}
+.grid{display:grid;grid-template-columns:2.2fr 1fr;gap:14px;margin-top:14px}.card{border:1px solid #31516c;border-radius:14px;background:#03111ddd;overflow:hidden}
+.player{position:relative;aspect-ratio:16/9;background:#02070c}.playerBg{position:absolute;inset:0;background:radial-gradient(circle at 18% 35%,rgba(40,88,112,.24),transparent 32%),linear-gradient(115deg,#07131d 0%,#03101a 45%,#01070d 100%)}
+.lock{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px}.lockbox{max-width:500px}.lockIcon{font-size:38px}.price{font-size:44px;font-weight:900;margin:12px}
+#vibix{display:none;position:absolute;inset:0;background:#000;padding:0} #vibix ins{display:block;width:100%;height:100%}
+.controlsFake{position:absolute;left:18px;right:18px;bottom:14px;height:3px;background:#7aa1ba55;border-radius:4px}
+.side{padding:16px}.eps{display:grid;grid-template-columns:1fr 1fr;gap:9px}.ep{padding:14px 10px;border:1px solid #29475d;border-radius:10px;background:#0a1b29;color:#fff;text-align:left}.ep small{display:block;color:#91a7b8;margin-top:5px}
+.infoRow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}.info,.ad{padding:20px}.genres{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.ad{min-height:190px;background:linear-gradient(90deg,#071827dd,#07182788),url("https://holod-2026.angel202490.workers.dev/holod-bg.png") center/cover}
+.notice{font-size:12px;color:#7890a4;margin-top:10px}.paid{display:none;padding:12px;background:#073d2a;color:#caffdf;text-align:center;font-weight:bold}
+@media(max-width:850px){.grid,.infoRow{grid-template-columns:1fr}.hero{min-height:360px;padding:22px}h1{font-size:46px}.wrap{width:96%}.eps{grid-template-columns:1fr 1fr}}
+
+.ad-live{position:relative;padding:0!important;min-height:190px;display:flex;align-items:center;justify-content:center;background:#020b13!important}
+.ad-live .ad-label{position:absolute;z-index:3;top:10px;left:10px;background:rgba(3,17,29,.88)}
+.ad-link{display:flex;width:100%;height:100%;min-height:190px;align-items:center;justify-content:center;overflow:hidden}
+.ad-img{display:block;width:100%;height:100%;min-height:190px;max-height:320px;object-fit:contain;background:#020b13}
+@media(max-width:850px){.ad-link,.ad-img{min-height:160px}.ad-img{max-height:260px}}
+
+</style>
+</head>
+<body>
+<main class="wrap">
+<section class="hero">
+  <div class="heroText">
+    <div class="tags"><span class="tag">2026</span><span class="tag">Сериал</span><span class="tag">1 сезон</span><span class="tag">4K</span></div>
+    <h1>ХОЛОД</h1>
+    <h2>Первый сезон · Все серии</h2>
+    <p>Остросюжетный сериал о расследовании, предательстве и борьбе за правду. Закрытый мир, опасные связи и тайны, которые постепенно меняют жизнь героев.</p>
+    <button class="btn" onclick="goPay()">▶ Смотреть первый сезон за 50 ₽</button>
+  </div>
+</section>
+
+<div class="grid">
+  <section class="card player" id="player">
+    <div class="playerBg"></div>
+    <div class="lock" id="lock">
+      <div class="lockbox">
+        <div class="lockIcon">🔒</div><div class="notice">ХОЛОД · 1 СЕЗОН</div>
+        <h2>Все серии сезона</h2>
+        <p>Единоразовая оплата открывает доступ к просмотру первого сезона.</p>
+        <div class="price">50 ₽</div>
+        <button class="btn" onclick="startPayment()">Оплатить первый сезон</button>
+        <div class="notice" id="payStatus">Оплата через ЮMoney · доступ ко всему первому сезону</div>
+      </div>
+    </div>
+    <div id="vibix">
+      <ins data-publisher-id="675043047" data-type="series" data-id="9089" data-season="1" data-design="5" data-poster="true" data-nopreload="true" data-width="100%" data-height="100%"></ins>
+    </div>
+    <div class="controlsFake" id="fakebar"></div>
+  </section>
+
+  <aside class="card side">
+    <div style="display:flex;justify-content:space-between;gap:10px"><div><b>Холод · Сезон 1</b><div class="notice">Все серии</div></div><span class="badge" id="access">🔒 Требуется доступ</span></div>
+    <div class="eps" style="margin-top:14px">
+      <button class="ep">Серия 1<small>Первый сезон</small></button><button class="ep">Серия 2<small>Первый сезон</small></button>
+      <button class="ep">Серия 3<small>Первый сезон</small></button><button class="ep">Серия 4<small>Первый сезон</small></button>
+      <button class="ep">Серия 5<small>Первый сезон</small></button><button class="ep">Серия 6<small>Первый сезон</small></button>
+      <button class="ep">Серия 7<small>Первый сезон</small></button><button class="ep">Серия 8<small>Первый сезон</small></button>
+    </div>
+  </aside>
+</div>
+
+<div class="paid" id="paid">✓ Оплата подтверждена — первый сезон разблокирован</div>
+
+<div class="infoRow">
+  <section class="card info">
+    <h2>О сериале</h2>
+    <p>«Холод» — сериал 2026 года. История разворачивается вокруг расследования, скрытых интересов, предательства и сложного выбора. Героям приходится разбираться в цепочке событий, где за каждой новой уликой скрывается следующая тайна.</p>
+    <div class="genres"><span class="tag">Драма</span><span class="tag">Триллер</span><span class="tag">Детектив</span></div>
+  </section>
+  <section class="card ad ad-live" aria-label="Реклама">
+    <span class="tag ad-label">Реклама</span>
+    <a class="ad-link" href="https://sneket3.online/r/XTdU" target="_blank" rel="noopener">
+      <img class="ad-img" src="https://sneket-partners.com/partner-public/promo/14/image" alt="Рекламный баннер">
+    </a>
+  </section>
+</div>
+</main>
+<script>
+const PAYMENT_API = "https://holod-payment.angel202490.workers.dev";
+
+function goPay(){
+  document.getElementById('player').scrollIntoView({behavior:'smooth',block:'center'});
+}
+
+async function startPayment(){
+  const status = document.getElementById('payStatus');
+  status.textContent = 'Создаём заказ…';
+  try {
+    const response = await fetch(PAYMENT_API + '/create-order', {method:'POST'});
+    if(!response.ok) throw new Error('create-order');
+    const data = await response.json();
+    localStorage.setItem('holodOrder', data.label);
+
+    const form = document.createElement('form');
+    form.method = 'POST';
+    form.action = data.paymentUrl;
+    for (const [name, value] of Object.entries(data.paymentFields)) {
+      const input = document.createElement('input');
+      input.type = 'hidden'; input.name = name; input.value = value;
+      form.appendChild(input);
+    }
+    document.body.appendChild(form);
+    form.submit();
+  } catch (e) {
+    status.textContent = 'Не удалось открыть оплату. Попробуйте ещё раз.';
+  }
+}
+
+function unlockSeason(){
+  document.getElementById('lock').style.display='none';
+  document.getElementById('fakebar').style.display='none';
+  document.getElementById('vibix').style.display='block';
+  document.getElementById('access').textContent='✓ Сезон доступен';
+  document.getElementById('paid').style.display='block';
+  setTimeout(()=>window.dispatchEvent(new Event('resize')),250);
+}
+
+async function checkPayment(){
+  const params = new URLSearchParams(location.search);
+  const order = params.get('order') || localStorage.getItem('holodOrder');
+  if(!order) return;
+  const status = document.getElementById('payStatus');
+  if(params.get('payment') === 'success') status.textContent = 'Проверяем оплату…';
+  try {
+    const response = await fetch(PAYMENT_API + '/check-access?order=' + encodeURIComponent(order));
+    const data = await response.json();
+    if(data.paid){
+      localStorage.setItem('holodPaidOrder', order);
+      unlockSeason();
+      status.textContent = 'Оплата подтверждена';
+      history.replaceState({}, '', location.pathname);
+      return;
+    }
+    if(params.get('payment') === 'success'){
+      status.textContent = 'Платёж обрабатывается. Проверяем ещё несколько секунд…';
+      let tries = 0;
+      const timer = setInterval(async()=>{
+        tries++;
+        try {
+          const r = await fetch(PAYMENT_API + '/check-access?order=' + encodeURIComponent(order));
+          const d = await r.json();
+          if(d.paid){ clearInterval(timer); localStorage.setItem('holodPaidOrder', order); unlockSeason(); status.textContent='Оплата подтверждена'; history.replaceState({}, '', location.pathname); }
+          else if(tries >= 10){ clearInterval(timer); status.textContent='Платёж пока не подтверждён. Обновите страницу через минуту.'; }
+        } catch(e){}
+      }, 3000);
+    }
+  } catch(e) {
+    if(params.get('payment') === 'success') status.textContent='Не удалось проверить оплату. Обновите страницу.';
+  }
+}
+
+checkPayment();
+</script>
+</body>
+</html>
