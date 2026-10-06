@@ -52,6 +52,16 @@ url("https://holod-2026.angel202490.workers.dev/holod-bg.png") center top/cover 
 .info{position:relative;padding-left:205px!important}.info:before{content:"";position:absolute;left:14px;top:14px;bottom:14px;width:175px;border-radius:7px;background:url("https://holod-2026.angel202490.workers.dev/holod-bg.png") 68% 28%/cover no-repeat}
 .ad-live{min-height:190px!important}.paid{margin:0 42px}
 @media(max-width:850px){.wrap{width:100%!important}.hero{padding:24px 18px!important;min-height:360px!important}.grid,.infoRow{margin-left:10px!important;margin-right:10px!important;grid-template-columns:1fr!important}.player,.side{height:auto!important;min-height:340px!important}.info{padding:14px!important;padding-top:200px!important}.info:before{left:14px;right:14px;top:14px;width:auto;height:170px;bottom:auto}.paid{margin:0 10px}}
+</style><style>
+/* Remove duplicated text/art from the supplied background */
+.heroText h1{display:none!important}
+.heroText .tags{margin-top:150px!important}
+.hero{position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;left:0;top:0;width:47%;height:63%;background:linear-gradient(90deg,rgba(2,9,18,.78),rgba(2,9,18,.46) 72%,transparent);pointer-events:none;z-index:0}
+.heroText{position:relative;z-index:1}
+/* Player must not reuse the hero/background artwork */
+.playerBg{background:radial-gradient(circle at 72% 44%,#173649 0,#0b1e2b 22%,#06131d 50%,#02080d 100%)!important}
+.player .hero,.player .heroText{display:none!important}
 </style></head>
 <body>
 <main class="wrap">
