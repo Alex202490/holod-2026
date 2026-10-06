@@ -1,0 +1,1 @@
+const mins=[48,51,47,52,49,50,46,54];document.querySelector('#episodes').innerHTML=mins.map((m,i)=>`<button class="episode"><i></i><span><b>Серия ${i+1}</b><small>${m} мин</small></span></button>`).join('');document.querySelectorAll('[data-pay]').forEach(b=>b.addEventListener('click',()=>alert('Подключаем защищённую оплату YooMoney на следующем шаге.')));
