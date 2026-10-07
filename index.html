@@ -123,6 +123,16 @@ background:url("https://holod-2026.angel202490.workers.dev/holod-bg.png") center
 .ep:hover{background:#0d2638!important;border-color:#4b88ad!important}
 .ep:hover:before{transform:translateY(-50%) scale(1.16)!important;background:#159be9!important;border-color:#8fd7ff!important;box-shadow:0 0 20px rgba(33,169,255,.5)!important}
 .ep:active:before{transform:translateY(-50%) scale(1.06)!important}
+</style><style id="about-series-final">
+.aboutSeries{display:grid!important;grid-template-columns:250px minmax(0,1fr)!important;gap:26px!important;align-items:stretch!important;padding:18px!important;min-height:360px!important}
+.aboutSeries:before{display:none!important}
+.aboutPoster{min-height:324px;border-radius:14px;background:url("assets/about-holod.jpg") center 16%/cover no-repeat;box-shadow:inset 0 0 0 1px rgba(109,168,207,.18)}
+.aboutCopy{padding:4px 12px 4px 0;display:flex;flex-direction:column;justify-content:center}
+.aboutCopy h2{font-size:30px!important;margin:0 0 18px!important}
+.aboutCopy p{font-size:17px!important;line-height:1.55!important;margin:0 0 14px!important;color:#e4f0f8!important}
+.aboutCopy .genres{margin-top:6px!important}
+.aboutCopy .tag{font-size:15px!important;padding:8px 13px!important}
+@media(max-width:850px){.aboutSeries{grid-template-columns:1fr!important}.aboutPoster{min-height:520px;background-size:contain;background-color:#000}.aboutCopy{padding:0 4px 6px}.aboutCopy h2{font-size:25px!important}.aboutCopy p{font-size:15px!important}}
 </style></head>
 <body>
 <main class="wrap">
@@ -170,10 +180,15 @@ background:url("https://holod-2026.angel202490.workers.dev/holod-bg.png") center
 <div class="paid" id="paid">✓ Оплата подтверждена — первый сезон разблокирован</div>
 
 <div class="infoRow">
-  <section class="card info">
-    <h2>О сериале</h2>
-    <p>«Холод» — сериал 2026 года. История разворачивается вокруг расследования, скрытых интересов, предательства и сложного выбора. Героям приходится разбираться в цепочке событий, где за каждой новой уликой скрывается следующая тайна.</p>
-    <div class="genres"><span class="tag">Драма</span><span class="tag">Триллер</span><span class="tag">Детектив</span></div>
+  <section class="card info aboutSeries">
+    <div class="aboutPoster" role="img" aria-label="Постер сериала Холод"></div>
+    <div class="aboutCopy">
+      <h2>О сериале</h2>
+      <p>Женя попадает в тюрьму за аварию, в которой погибли её муж и шестилетняя дочь. Реальные виновники аварии — мажоры, чьи родители повлияли на исход дела.</p>
+      <p>В колонии Женя случайно спасает зечку Яну, отбывающую срок за убийство. В благодарность та обучает Женю, как стать сильнее, чтобы отомстить, и помогает бежать.</p>
+      <p>На свободе Женя обретает богатство по наводке Яны и начинает мстить своим врагам.</p>
+      <div class="genres"><span class="tag">Драма</span><span class="tag">Триллер</span><span class="tag">Детектив</span></div>
+    </div>
   </section>
   <section class="card ad ad-live" aria-label="Реклама">
     <span class="tag ad-label">Реклама</span>
