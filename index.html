@@ -267,6 +267,11 @@ background:url("https://holod-2026.angel202490.workers.dev/holod-bg.png") center
  .aboutCopy h2{font-size:21px!important}
  .aboutCopy p{font-size:13px!important}
 }
+</style><style id="temporary-vibix-review-open">
+/* TEMPORARY: player paywall hidden while Vibix support reviews the site. Restore by removing this style and the temporary script below. */
+#lock,#fakebar,#paid{display:none!important}
+#vibix{display:block!important}
+#access{display:inline-flex!important}
 </style></head>
 <body>
 <main class="wrap">
@@ -410,7 +415,11 @@ async function checkPayment(){
   }
 }
 
-checkPayment();
+/* TEMPORARY: open player for Vibix support review */
+unlockSeason();
+document.getElementById("paid").style.display="none";
+document.getElementById("access").textContent="Сезон 1 · Все серии";
+// checkPayment();
 </script>
 </body>
 </html>
