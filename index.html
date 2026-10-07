@@ -107,6 +107,22 @@ background:url("https://holod-2026.angel202490.workers.dev/holod-bg.png") center
   .grid{grid-template-columns:minmax(0,2.18fr) minmax(360px,1fr)!important}
   .infoRow{grid-template-columns:1.08fr .92fr!important}
 }
+</style><style id="episode-play-icons">
+/* Episode cards: play icon instead of thumbnails */
+.ep{position:relative!important;padding:8px 8px 8px 70px!important;cursor:pointer!important;transition:border-color .18s ease,background .18s ease!important}
+.ep:before{
+  content:"▶"!important;position:absolute!important;left:14px!important;top:50%!important;
+  width:42px!important;height:42px!important;transform:translateY(-50%) scale(1)!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  border:1px solid #6fa9ce!important;border-radius:50%!important;
+  background:rgba(4,22,35,.92)!important;background-image:none!important;
+  color:#fff!important;font-size:17px!important;line-height:1!important;
+  text-indent:3px!important;box-shadow:0 0 0 rgba(33,169,255,0)!important;
+  transition:transform .18s ease,background .18s ease,box-shadow .18s ease,border-color .18s ease!important
+}
+.ep:hover{background:#0d2638!important;border-color:#4b88ad!important}
+.ep:hover:before{transform:translateY(-50%) scale(1.16)!important;background:#159be9!important;border-color:#8fd7ff!important;box-shadow:0 0 20px rgba(33,169,255,.5)!important}
+.ep:active:before{transform:translateY(-50%) scale(1.06)!important}
 </style></head>
 <body>
 <main class="wrap">
@@ -142,10 +158,10 @@ background:url("https://holod-2026.angel202490.workers.dev/holod-bg.png") center
   <aside class="card side">
     <div style="display:flex;justify-content:space-between;gap:10px"><div><b>Холод · Сезон 1</b><div class="notice">Все серии</div></div><span class="badge" id="access">🔒 Требуется доступ</span></div>
     <div class="eps" style="margin-top:14px">
-      <button class="ep">Серия 1<small>Первый сезон</small></button><button class="ep">Серия 2<small>Первый сезон</small></button>
-      <button class="ep">Серия 3<small>Первый сезон</small></button><button class="ep">Серия 4<small>Первый сезон</small></button>
-      <button class="ep">Серия 5<small>Первый сезон</small></button><button class="ep">Серия 6<small>Первый сезон</small></button>
-      <button class="ep">Серия 7<small>Первый сезон</small></button><button class="ep">Серия 8<small>Первый сезон</small></button>
+      <button class="ep" type="button" onclick="goPay()">Серия 1<small>Первый сезон</small></button><button class="ep" type="button" onclick="goPay()">Серия 2<small>Первый сезон</small></button>
+      <button class="ep" type="button" onclick="goPay()">Серия 3<small>Первый сезон</small></button><button class="ep" type="button" onclick="goPay()">Серия 4<small>Первый сезон</small></button>
+      <button class="ep" type="button" onclick="goPay()">Серия 5<small>Первый сезон</small></button><button class="ep" type="button" onclick="goPay()">Серия 6<small>Первый сезон</small></button>
+      <button class="ep" type="button" onclick="goPay()">Серия 7<small>Первый сезон</small></button><button class="ep" type="button" onclick="goPay()">Серия 8<small>Первый сезон</small></button>
     </div>
   </aside>
 </div>
