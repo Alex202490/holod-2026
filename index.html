@@ -144,6 +144,21 @@ background:url("https://holod-2026.angel202490.workers.dev/holod-bg.png") center
 .aboutCopy .genres{margin-top:2px!important}
 .aboutCopy .tag{font-size:12px!important;padding:5px 9px!important}
 @media(max-width:850px){.aboutSeries{grid-template-columns:120px minmax(0,1fr)!important;gap:12px!important;min-height:190px!important}.aboutPoster{min-height:166px!important;height:166px!important;background-size:cover!important}.aboutCopy h2{font-size:21px!important}.aboutCopy p{font-size:13px!important;line-height:1.35!important}}
+</style><style id="about-poster-fit-fix">
+/* Fit the supplied portrait poster cleanly without cropping it */
+.aboutSeries{grid-template-columns:150px minmax(0,1fr)!important}
+.aboutPoster{
+  width:150px!important;height:205px!important;min-height:205px!important;
+  align-self:center!important;border-radius:8px!important;
+  background-color:#000!important;
+  background-image:url("assets/about-holod.jpg")!important;
+  background-size:contain!important;background-repeat:no-repeat!important;
+  background-position:center center!important;
+}
+@media(max-width:850px){
+ .aboutSeries{grid-template-columns:120px minmax(0,1fr)!important}
+ .aboutPoster{width:120px!important;height:164px!important;min-height:164px!important;background-size:contain!important}
+}
 </style></head>
 <body>
 <main class="wrap">
