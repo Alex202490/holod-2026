@@ -534,7 +534,9 @@ document.getElementById("access").textContent="Сезон 1 · Все серии
     var frame=host&&host.querySelector('iframe');
     var ins=host&&host.querySelector('ins');
     var scripts=[].slice.call(document.scripts).filter(function(s){return /graphicslab\.io/.test(s.src||'');});
-    box.textContent='VBIX DIAG: SDK='+(scripts.length?'загружен/подключён':'нет')+' | INS='+(ins?'есть':'нет')+' | IFRAME='+(frame?'есть':'нет');
+    var src=frame?(frame.getAttribute('src')||'(без src)'):'—';
+    var state=frame?(frame.complete===true?'complete':'created'):'none';
+    box.textContent='VBIX DIAG: SDK='+(scripts.length?'загружен/подключён':'нет')+' | INS='+(ins?'есть':'нет')+' | IFRAME='+(frame?'есть':'нет')+' | STATE='+state+' | SRC='+src;
   }
   window.addEventListener('error',function(e){if(box) box.textContent+=' | ERROR='+(e.message||'script/resource');});
   setTimeout(check,1500); setTimeout(check,5000); setTimeout(check,12000);
