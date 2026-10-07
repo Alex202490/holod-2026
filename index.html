@@ -224,6 +224,49 @@ background:url("https://holod-2026.angel202490.workers.dev/holod-bg.png") center
 </style><style id="episodes-10-visible-final">
 .side{height:auto!important;min-height:368px!important;max-height:none!important;overflow:visible!important}
 .episodes{max-height:none!important;height:auto!important;overflow:visible!important;padding-bottom:10px!important}
+</style><style id="final-functional-polish">
+/* Real visible hero CTA */
+.heroText .btn{
+ display:flex!important;align-items:center!important;justify-content:center!important;
+ position:absolute!important;left:84px!important;top:347px!important;
+ width:388px!important;height:52px!important;opacity:1!important;
+ border:1px solid rgba(143,215,255,.7)!important;border-radius:8px!important;
+ background:linear-gradient(180deg,#20b4ff,#078bd7)!important;
+ color:#fff!important;font-weight:800!important;font-size:16px!important;
+ text-decoration:none!important;cursor:pointer!important;z-index:5!important;
+ box-shadow:0 7px 20px rgba(20,156,232,.28)!important;
+ transition:transform .18s ease,box-shadow .18s ease,filter .18s ease!important;
+}
+.heroText .btn:hover{
+ transform:translateY(-3px) scale(1.055)!important;
+ box-shadow:0 13px 32px rgba(33,169,255,.5)!important;
+ filter:brightness(1.1)!important;
+}
+.heroText .btn:active{transform:translateY(0) scale(1.02)!important}
+
+/* Keep all ten episodes visible */
+.side,.episodes{max-height:none!important;height:auto!important;overflow:visible!important}
+
+/* Mobile */
+@media(max-width:850px){
+ .wrap{width:100%!important;padding-bottom:22px!important}
+ .hero{height:300px!important;min-height:300px!important;background-size:auto 300px!important;background-position:center top!important}
+ .heroText .btn{left:50%!important;top:auto!important;bottom:14px!important;width:min(88vw,388px)!important;height:48px!important;transform:translateX(-50%)!important}
+ .heroText .btn:hover{transform:translateX(-50%) translateY(-2px) scale(1.03)!important}
+ .grid{margin:0 12px!important;grid-template-columns:1fr!important;gap:12px!important}
+ .episodes{grid-template-columns:1fr 1fr!important}
+ .infoRow{margin-left:12px!important;margin-right:12px!important;grid-template-columns:1fr!important}
+ .player{min-height:360px!important}
+}
+@media(max-width:520px){
+ .hero{height:260px!important;min-height:260px!important;background-size:auto 260px!important}
+ .episodes{grid-template-columns:1fr!important}
+ .player{min-height:320px!important}
+ .aboutSeries{grid-template-columns:96px minmax(0,1fr)!important}
+ .aboutSeries .aboutPoster.aboutPlay{width:96px!important;height:132px!important;min-height:132px!important}
+ .aboutCopy h2{font-size:21px!important}
+ .aboutCopy p{font-size:13px!important}
+}
 </style></head>
 <body>
 <main class="wrap">
@@ -259,12 +302,12 @@ background:url("https://holod-2026.angel202490.workers.dev/holod-bg.png") center
   <aside class="card side">
     <div style="display:flex;justify-content:space-between;gap:10px"><div><b>Холод · Сезон 1</b><div class="notice">Все серии</div></div><span class="badge" id="access">🔒 Требуется доступ</span></div>
     <div class="eps" style="margin-top:14px">
-      <button class="ep" type="button" onclick="goPlayer()">Серия 1<small>Первый сезон</small></button><button class="ep" type="button" onclick="goPlayer()">Серия 2<small>Первый сезон</small></button>
-      <button class="ep" type="button" onclick="goPlayer()">Серия 3<small>Первый сезон</small></button><button class="ep" type="button" onclick="goPlayer()">Серия 4<small>Первый сезон</small></button>
-      <button class="ep" type="button" onclick="goPlayer()">Серия 5<small>Первый сезон</small></button><button class="ep" type="button" onclick="goPlayer()">Серия 6<small>Первый сезон</small></button>
-      <button class="ep" type="button" onclick="goPlayer()">Серия 7<small>Первый сезон</small></button><button class="ep" type="button" onclick="goPlayer()">Серия 8<small>Первый сезон</small></button>
-<button class="ep" type="button" onclick="goPlayer()">Серия 9<small>Первый сезон</small></button>
-<button class="ep" type="button" onclick="goPlayer()">Серия 10<small>Первый сезон</small></button>
+      <button class="ep" type="button" onclick="goPlayer()" aria-label="Перейти к плееру, серия 1">Серия 1<small>Первый сезон</small></button><button class="ep" type="button" onclick="goPlayer()" aria-label="Перейти к плееру, серия 2">Серия 2<small>Первый сезон</small></button>
+      <button class="ep" type="button" onclick="goPlayer()" aria-label="Перейти к плееру, серия 3">Серия 3<small>Первый сезон</small></button><button class="ep" type="button" onclick="goPlayer()" aria-label="Перейти к плееру, серия 4">Серия 4<small>Первый сезон</small></button>
+      <button class="ep" type="button" onclick="goPlayer()" aria-label="Перейти к плееру, серия 5">Серия 5<small>Первый сезон</small></button><button class="ep" type="button" onclick="goPlayer()" aria-label="Перейти к плееру, серия 6">Серия 6<small>Первый сезон</small></button>
+      <button class="ep" type="button" onclick="goPlayer()" aria-label="Перейти к плееру, серия 7">Серия 7<small>Первый сезон</small></button><button class="ep" type="button" onclick="goPlayer()" aria-label="Перейти к плееру, серия 8">Серия 8<small>Первый сезон</small></button>
+<button class="ep" type="button" onclick="goPlayer()" aria-label="Перейти к плееру, серия 9">Серия 9<small>Первый сезон</small></button>
+<button class="ep" type="button" onclick="goPlayer()" aria-label="Перейти к плееру, серия 10">Серия 10<small>Первый сезон</small></button>
     </div>
   </aside>
 </div>
