@@ -203,6 +203,11 @@ background:url("https://holod-2026.angel202490.workers.dev/holod-bg.png") center
 @media(max-width:850px){
  .aboutSeries .aboutPoster{width:120px!important;height:164px!important;min-height:164px!important}
 }
+</style><style id="about-player-icon-final">
+.aboutSeries .aboutPoster.aboutPlay{width:150px!important;height:205px!important;min-height:205px!important;display:flex!important;align-items:center!important;justify-content:center!important;border:1px solid #315a73!important;border-radius:8px!important;background:#06131d!important;cursor:pointer!important;padding:0!important}
+.aboutSeries .aboutPlay span{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:1px solid #6fa9ce;background:#071c2a;color:#fff;font-size:25px;text-indent:4px;transition:transform .18s ease,background .18s ease,box-shadow .18s ease,border-color .18s ease}
+.aboutSeries .aboutPlay:hover span{transform:scale(1.16);background:#159be9;border-color:#8fd7ff;box-shadow:0 0 22px rgba(33,169,255,.5)}
+@media(max-width:850px){.aboutSeries .aboutPoster.aboutPlay{width:120px!important;height:164px!important;min-height:164px!important}}
 </style></head>
 <body>
 <main class="wrap">
@@ -251,7 +256,7 @@ background:url("https://holod-2026.angel202490.workers.dev/holod-bg.png") center
 
 <div class="infoRow">
   <section class="card info aboutSeries">
-    <img class="aboutPoster" src="assets/about-player-poster.jpg?v=1" alt="Постер сериала Холод" loading="eager" decoding="async">
+    <button class="aboutPoster aboutPlay" type="button" onclick="document.querySelector('.player').scrollIntoView({behavior:'smooth',block:'center'})" aria-label="Перейти к плееру"><span>▶</span></button>
     <div class="aboutCopy">
       <h2>О сериале</h2>
       <p>Женя попадает в тюрьму за аварию, в которой погибли её муж и шестилетняя дочь. Реальные виновники аварии — мажоры, чьи родители повлияли на исход дела.</p>
