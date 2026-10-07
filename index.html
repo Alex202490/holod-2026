@@ -4,8 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Холод — 1 сезон, все серии</title>
-<script src="https://graphicslab.io/sdk/v2/rendex-sdk.min.js" async></script>
-<script src="https://alt.graphicslab.io/sdk/v2/rendex-sdk.min.js" async></script>
+
 <style>
 *{box-sizing:border-box} body{margin:0;background:#020912;color:#eef7ff;font-family:Arial,Helvetica,sans-serif}
 body:before{content:"";position:fixed;inset:0;background:linear-gradient(180deg,rgba(1,8,16,.18),#020912 68%),url("f488b989-e9a9-469d-b0df-71320c2133ba.png") top center/cover no-repeat;z-index:-2}
@@ -471,5 +470,30 @@ document.getElementById("access").textContent="Сезон 1 · Все серии
 // checkPayment();
 </script>
 <!-- Cloudflare Worker deployment trigger -->
+<script id="vibix-sdk-loader">
+(function(){
+  const sources=[
+    "https://graphicslab.io/sdk/v2/rendex-sdk.min.js",
+    "https://alt.graphicslab.io/sdk/v2/rendex-sdk.min.js"
+  ];
+  let i=0;
+  function loadNext(){
+    if(i>=sources.length) return;
+    const s=document.createElement("script");
+    s.src=sources[i++];
+    s.async=false;
+    s.onload=function(){
+      setTimeout(function(){
+        window.dispatchEvent(new Event("resize"));
+        window.dispatchEvent(new Event("load"));
+      },250);
+    };
+    s.onerror=loadNext;
+    document.head.appendChild(s);
+  }
+  if(document.readyState==="loading") document.addEventListener("DOMContentLoaded",loadNext);
+  else loadNext();
+})();
+</script>
 </body>
 </html>
