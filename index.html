@@ -290,6 +290,11 @@ background-position:center center!important;background-size:cover!important;back
  box-shadow:none!important;pointer-events:none!important;
 }
 @media(max-width:850px){.hero:before{display:none!important}}
+</style><style id="viewer-comments">
+.viewerComments{margin:18px 83px 0;padding:18px;border:1px solid #17364b;border-radius:12px;background:linear-gradient(180deg,#07141e,#050d14)}
+.commentsHead{display:flex;align-items:center;justify-content:space-between;gap:15px}.commentsHead h2{margin:0;font-size:25px}.commentsHead span,.commentNote{color:#829cac;font-size:12px}.commentNote{margin-top:5px}
+.commentsGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}.comment{display:flex;gap:11px;padding:14px;border:1px solid #17394f;border-radius:10px;background:#071722}.avatar{width:38px;height:38px;min-width:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#12354b;font-weight:800}.comment b{display:inline-block;margin-right:8px}.comment span{font-size:12px;color:#b9d9ec;letter-spacing:1px}.comment p{margin:7px 0 0;color:#d4e2eb;font-size:13px;line-height:1.45}
+@media(max-width:850px){.viewerComments{margin:14px 16px 0}.commentsGrid{grid-template-columns:1fr}.commentsHead{align-items:flex-start;flex-direction:column;gap:3px}}
 </style></head>
 <body>
 <main class="wrap">
@@ -352,6 +357,15 @@ background-position:center center!important;background-size:cover!important;back
 </div>
 
 
+<section class="viewerComments">
+  <div class="commentsHead"><h2>Комментарии зрителей</h2><span>Обсуждение сериала</span></div>
+  <div class="commentNote">Примеры оформления комментариев</div>
+  <div class="commentsGrid">
+    <article class="comment"><div class="avatar">А</div><div><b>Алексей</b><span>★★★★★</span><p>Интересная завязка, особенно понравилась атмосфера сериала.</p></div></article>
+    <article class="comment"><div class="avatar">М</div><div><b>Марина</b><span>★★★★★</span><p>Удобно, что все серии собраны в одном месте и можно сразу перейти к плееру.</p></div></article>
+    <article class="comment"><div class="avatar">Д</div><div><b>Дмитрий</b><span>★★★★☆</span><p>Посмотрел несколько серий подряд. Картинка на большом экране выглядит хорошо.</p></div></article>
+  </div>
+</section>
 </main>
 <script>
 const PAYMENT_API = "https://holod-payment.angel202490.workers.dev";
