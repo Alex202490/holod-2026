@@ -80,6 +80,33 @@ background:url("https://holod-2026.angel202490.workers.dev/holod-bg.png") center
 .info{min-height:198px!important}.ad-live{min-height:198px!important}
 @media(max-width:1200px){.grid,.infoRow{margin-left:3%!important;margin-right:3%!important;grid-template-columns:2fr 1fr!important}.hero{background-size:cover!important}.heroText .btn{left:5.5%!important}}
 @media(max-width:850px){.hero{height:360px!important;min-height:360px!important;background-position:center top!important}.heroText .btn{top:auto!important;bottom:18px!important;left:5%!important;width:90%!important}.grid,.infoRow{grid-template-columns:1fr!important;margin-left:10px!important;margin-right:10px!important}.player,.side{height:auto!important;min-height:340px!important}}
+</style><style id="final-polish">
+/* Final launch polish */
+.hero:after{display:none!important}
+.heroText{background:none!important}
+.playerBg{
+  background:
+    linear-gradient(90deg,rgba(1,8,15,.82) 0%,rgba(1,8,15,.48) 43%,rgba(1,8,15,.16) 100%),
+    url("assets/player.jpg") center/cover no-repeat!important
+}
+.lock{background:transparent!important}
+.controlsFake{height:2px!important;background:linear-gradient(90deg,#21a9ff 0 32%,#557181 32% 100%)!important}
+.side{background:#03111d!important}
+.ep{position:relative!important;overflow:hidden!important;padding:8px 8px 8px 102px!important;height:66px!important}
+.ep:before{content:"";position:absolute;left:0;top:0;bottom:0;width:92px;background-image:url("https://holod-2026.angel202490.workers.dev/holod-bg.png");background-size:520px auto;background-repeat:no-repeat;border-right:1px solid #29475d}
+.ep:nth-child(1):before{background-position:12% 70%}.ep:nth-child(2):before{background-position:82% 30%}
+.ep:nth-child(3):before{background-position:24% 52%}.ep:nth-child(4):before{background-position:70% 65%}
+.ep:nth-child(5):before{background-position:42% 74%}.ep:nth-child(6):before{background-position:88% 48%}
+.ep:nth-child(7):before{background-position:58% 38%}.ep:nth-child(8):before{background-position:34% 64%}
+.info:before{background:url("https://holod-2026.angel202490.workers.dev/holod-bg.png") 70% 30%/cover no-repeat!important}
+.ad-img{object-fit:cover!important;width:100%!important;max-height:none!important}
+.ad-link{height:198px!important}
+#payStatus{min-height:15px}
+@media(min-width:1201px){
+  .wrap{max-width:1536px!important}
+  .grid{grid-template-columns:minmax(0,2.18fr) minmax(360px,1fr)!important}
+  .infoRow{grid-template-columns:1.08fr .92fr!important}
+}
 </style></head>
 <body>
 <main class="wrap">
