@@ -133,6 +133,17 @@ background:url("https://holod-2026.angel202490.workers.dev/holod-bg.png") center
 .aboutCopy .genres{margin-top:6px!important}
 .aboutCopy .tag{font-size:15px!important;padding:8px 13px!important}
 @media(max-width:850px){.aboutSeries{grid-template-columns:1fr!important}.aboutPoster{min-height:520px;background-size:contain;background-color:#000}.aboutCopy{padding:0 4px 6px}.aboutCopy h2{font-size:25px!important}.aboutCopy p{font-size:15px!important}}
+</style><style id="about-series-compact-fix">
+/* Return About card close to its original compact footprint */
+.infoRow{align-items:stretch!important}
+.aboutSeries{display:grid!important;grid-template-columns:165px minmax(0,1fr)!important;gap:16px!important;padding:12px!important;min-height:198px!important;height:auto!important}
+.aboutPoster{min-height:174px!important;height:174px!important;border-radius:8px!important;background-position:center 13%!important;background-size:cover!important}
+.aboutCopy{padding:0!important;justify-content:flex-start!important}
+.aboutCopy h2{font-size:24px!important;margin:3px 0 10px!important}
+.aboutCopy p{font-size:14px!important;line-height:1.42!important;margin:0 0 7px!important}
+.aboutCopy .genres{margin-top:2px!important}
+.aboutCopy .tag{font-size:12px!important;padding:5px 9px!important}
+@media(max-width:850px){.aboutSeries{grid-template-columns:120px minmax(0,1fr)!important;gap:12px!important;min-height:190px!important}.aboutPoster{min-height:166px!important;height:166px!important;background-size:cover!important}.aboutCopy h2{font-size:21px!important}.aboutCopy p{font-size:13px!important;line-height:1.35!important}}
 </style></head>
 <body>
 <main class="wrap">
