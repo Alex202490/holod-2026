@@ -217,7 +217,7 @@ background:url("https://holod-2026.angel202490.workers.dev/holod-bg.png") center
     <h1>ХОЛОД</h1>
     <h2>Первый сезон · Все серии</h2>
     <p>Остросюжетный сериал о расследовании, предательстве и борьбе за правду. Закрытый мир, опасные связи и тайны, которые постепенно меняют жизнь героев.</p>
-    <button class="btn" onclick="goPay()">▶ Смотреть первый сезон за 50 ₽</button>
+    <button class="btn" onclick="goPlayer()">▶ Смотреть первый сезон за 50 ₽</button>
   </div>
 </section>
 
@@ -243,11 +243,11 @@ background:url("https://holod-2026.angel202490.workers.dev/holod-bg.png") center
   <aside class="card side">
     <div style="display:flex;justify-content:space-between;gap:10px"><div><b>Холод · Сезон 1</b><div class="notice">Все серии</div></div><span class="badge" id="access">🔒 Требуется доступ</span></div>
     <div class="eps" style="margin-top:14px">
-      <button class="ep" type="button" onclick="goPay()">Серия 1<small>Первый сезон</small></button><button class="ep" type="button" onclick="goPay()">Серия 2<small>Первый сезон</small></button>
-      <button class="ep" type="button" onclick="goPay()">Серия 3<small>Первый сезон</small></button><button class="ep" type="button" onclick="goPay()">Серия 4<small>Первый сезон</small></button>
-      <button class="ep" type="button" onclick="goPay()">Серия 5<small>Первый сезон</small></button><button class="ep" type="button" onclick="goPay()">Серия 6<small>Первый сезон</small></button>
-      <button class="ep" type="button" onclick="goPay()">Серия 7<small>Первый сезон</small></button><button class="ep" type="button" onclick="goPay()">Серия 8<small>Первый сезон</small></button>
-      <button class="ep" type="button" onclick="goPay()">Серия 9<small>Первый сезон</small></button><button class="ep" type="button" onclick="goPay()">Серия 10<small>Первый сезон</small></button>
+      <button class="ep" type="button" onclick="goPlayer()">Серия 1<small>Первый сезон</small></button><button class="ep" type="button" onclick="goPlayer()">Серия 2<small>Первый сезон</small></button>
+      <button class="ep" type="button" onclick="goPlayer()">Серия 3<small>Первый сезон</small></button><button class="ep" type="button" onclick="goPlayer()">Серия 4<small>Первый сезон</small></button>
+      <button class="ep" type="button" onclick="goPlayer()">Серия 5<small>Первый сезон</small></button><button class="ep" type="button" onclick="goPlayer()">Серия 6<small>Первый сезон</small></button>
+      <button class="ep" type="button" onclick="goPlayer()">Серия 7<small>Первый сезон</small></button><button class="ep" type="button" onclick="goPlayer()">Серия 8<small>Первый сезон</small></button>
+      <button class="ep" type="button" onclick="goPlayer()">Серия 9<small>Первый сезон</small></button><button class="ep" type="button" onclick="goPlayer()">Серия 10<small>Первый сезон</small></button>
     </div>
   </aside>
 </div>
@@ -256,7 +256,7 @@ background:url("https://holod-2026.angel202490.workers.dev/holod-bg.png") center
 
 <div class="infoRow">
   <section class="card info aboutSeries">
-    <button class="aboutPoster aboutPlay" type="button" onclick="document.querySelector('.player').scrollIntoView({behavior:'smooth',block:'center'})" aria-label="Перейти к плееру"><span>▶</span></button>
+    <button class="aboutPoster aboutPlay" type="button" onclick="goPlayer()" aria-label="Перейти к плееру"><span>▶</span></button>
     <div class="aboutCopy">
       <h2>О сериале</h2>
       <p>Женя попадает в тюрьму за аварию, в которой погибли её муж и шестилетняя дочь. Реальные виновники аварии — мажоры, чьи родители повлияли на исход дела.</p>
@@ -274,9 +274,14 @@ background:url("https://holod-2026.angel202490.workers.dev/holod-bg.png") center
 <script>
 const PAYMENT_API = "https://holod-payment.angel202490.workers.dev";
 
-function goPay(){
-  document.getElementById('player').scrollIntoView({behavior:'smooth',block:'center'});
+function goPlayer(){
+  const player = document.getElementById('player');
+  if(!player) return;
+  player.scrollIntoView({behavior:'smooth',block:'center'});
+  player.setAttribute('tabindex','-1');
+  setTimeout(()=>player.focus({preventScroll:true}),450);
 }
+function goPay(){ goPlayer(); }
 
 async function startPayment(){
   const status = document.getElementById('payStatus');
