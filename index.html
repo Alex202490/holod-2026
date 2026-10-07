@@ -312,6 +312,32 @@ background-position:center center!important;background-size:cover!important;back
   .aboutSeries .aboutPoster{width:86px!important;height:118px!important;min-height:118px!important}
   .aboutHeading h2{font-size:20px!important}
 }
+</style><style id="mobile-vibix-full-fit">
+/* Mobile: give the VBIX series UI enough vertical room; do not crop its controls. */
+@media(max-width:850px){
+  .grid{align-items:start!important}
+  .player{
+    position:relative!important;
+    width:100%!important;
+    height:clamp(420px,78vh,620px)!important;
+    min-height:420px!important;
+    aspect-ratio:auto!important;
+    overflow:hidden!important;
+    background:#000!important;
+  }
+  #vibix{
+    position:absolute!important;inset:0!important;
+    display:block!important;width:100%!important;height:100%!important;
+    min-height:100%!important;overflow:hidden!important;background:#000!important;
+  }
+  #vibix ins{
+    display:block!important;width:100%!important;height:100%!important;
+    min-height:100%!important;margin:0!important;padding:0!important;
+  }
+}
+@media(max-width:520px){
+  .player{height:clamp(430px,72vh,560px)!important;min-height:430px!important}
+}
 </style></head>
 <body>
 <main class="wrap">
