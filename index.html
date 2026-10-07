@@ -275,6 +275,16 @@ background:url("https://holod-2026.angel202490.workers.dev/holod-bg.png") center
 </style><style id="temporary-hide-hero-price-cta">
 /* TEMPORARY: hide hero 50 ₽ CTA while Vibix support reviews the site. */
 .heroText .btn{display:none!important;pointer-events:none!important}
+</style><style id="temporary-cover-hero-price-art">
+/* TEMPORARY: cover the CTA text baked into the hero artwork during Vibix review. */
+.hero:before{
+ content:""!important;display:block!important;position:absolute!important;
+ left:78px!important;top:340px!important;width:410px!important;height:66px!important;
+ z-index:4!important;border-radius:10px!important;
+ background:linear-gradient(90deg,rgba(5,16,25,.98),rgba(7,21,32,.98))!important;
+ box-shadow:none!important;pointer-events:none!important;
+}
+@media(max-width:850px){.hero:before{display:none!important}}
 </style></head>
 <body>
 <main class="wrap">
