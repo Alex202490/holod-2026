@@ -404,6 +404,31 @@ background-position:center center!important;background-size:cover!important;back
 </div>
 
 
+<style id="rocketPromoMiniStyles">
+.rocketPromoMini{margin:16px 83px 0;width:min(310px,calc(100% - 166px));border:1px solid #275c7b;border-radius:14px;background:linear-gradient(145deg,#091c31,#04101c);padding:14px;color:#eaf8ff;text-decoration:none;display:block;box-shadow:0 8px 24px #0005;transition:transform .2s,border-color .2s}
+.rocketPromoMini:hover,.rocketPromoMini:focus-visible{transform:translateY(-3px);border-color:#55cfff}
+.rocketPromoMini .rocketPromoTitle{font-size:17px;font-weight:800;letter-spacing:.6px;text-align:center}
+.rocketPromoMini .rocketPromoCaption{font-size:11px;color:#91c4e0;text-align:center;margin:5px 0 8px}
+.rocketPromoMini .rocketPromoStage{height:88px;position:relative;overflow:hidden;border:1px solid #21465e;border-radius:10px;background:radial-gradient(ellipse at bottom,#173a5e,#07111f 70%)}
+.rocketPromoMini .rocketPromoStars{position:absolute;inset:0;background-image:radial-gradient(#b4ecff 1px,transparent 1px);background-size:24px 21px;opacity:.35;animation:rocketStars 4s linear infinite}
+.rocketPromoMini .rocketPromoShip{position:absolute;left:calc(50% - 22px);top:19px;font-size:43px;animation:rocketHover 2s ease-in-out infinite}
+.rocketPromoMini .rocketPromoCountdown{position:absolute;right:10px;top:9px;font-size:10px;color:#9adfff;border:1px solid #327596;border-radius:5px;padding:4px}
+.rocketPromoMini .rocketPromoBtn{margin-top:10px;padding:10px;border-radius:8px;text-align:center;background:linear-gradient(90deg,#008ab6,#0a68a4);color:white;font-size:13px;font-weight:800}
+.rocketPromoMini .rocketPromoNote{text-align:center;color:#98c2d8;font-size:10px;margin-top:7px}
+@keyframes rocketHover{0%,100%{transform:translateY(5px)}50%{transform:translateY(-7px)}}
+@keyframes rocketStars{to{background-position:0 42px}}
+@media(max-width:650px){.rocketPromoMini{margin:16px 0 0;width:min(310px,100%)}}
+@media(prefers-reduced-motion:reduce){.rocketPromoMini .rocketPromoStars,.rocketPromoMini .rocketPromoShip{animation:none}}
+</style>
+<a id="rocketPromoMini" class="rocketPromoMini" href="https://boss05.gitverse.site/neon-rocket/" target="_blank" rel="noopener noreferrer" aria-label="NEON ROCKET — играть бесплатно, открыть полную игру">
+<div class="rocketPromoTitle">🚀 NEON ROCKET</div>
+<div class="rocketPromoCaption">Запусти ракету — попробуй свою удачу!</div>
+<div class="rocketPromoStage"><div class="rocketPromoStars"></div><div class="rocketPromoShip">🚀</div><div class="rocketPromoCountdown">СТАРТ · 3 · 2 · 1</div></div>
+<div class="rocketPromoBtn">▶ ИГРАТЬ БЕСПЛАТНО ↗</div>
+<div class="rocketPromoNote">Полная версия — бесплатно</div>
+</a>
+
+
 <section class="viewerComments">
   <div class="commentsHead"><h2>Комментарии зрителей</h2><span>Обсуждение сериала</span></div>
   
