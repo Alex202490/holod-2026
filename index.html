@@ -342,7 +342,26 @@ background-position:center center!important;background-size:cover!important;back
 @media(max-width:520px){
   .player,#vibix,#vibix ins,#vibix iframe{height:280px!important;min-height:280px!important}
 }
-</style></head>
+</style><style id="neon-games-styles">
+.neonGamesShowcase{margin:18px 83px 0;padding:22px;border:1px solid #24536e;border-radius:14px;background:linear-gradient(135deg,#081b2b,#04101c);color:#eaf8ff}
+.neonGamesShowcase h2{font-size:24px;margin:0 0 6px}.neonGamesIntro{font-size:13px;color:#98bed5;margin:0 0 18px}
+.neonGamesGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.neonGameCard{display:flex;flex-direction:column;gap:10px;min-width:0;padding:14px;border-radius:13px;border:1px solid #286181;background:linear-gradient(160deg,#0b2940,#061421);text-decoration:none;color:#eaf8ff;transition:transform .25s,border-color .25s,box-shadow .25s}
+.neonGameCard:hover,.neonGameCard:focus-visible{transform:translateY(-5px);border-color:#5edfff;box-shadow:0 12px 30px #0008}
+.neonGameTitle{font-size:16px;font-weight:800;letter-spacing:.3px}.neonGameDesc{font-size:12px;color:#9ebed1;min-height:30px}
+.neonGameArt{height:105px;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:10px;background:radial-gradient(circle at center,#124265,#061522);font-size:57px}
+.neonGameArt span{display:block;animation:neonFloat 2.7s ease-in-out infinite}
+.neonGameCard:nth-child(2) .neonGameArt span{animation:neonPulse 1.7s ease-in-out infinite}
+.neonGameCard:nth-child(3) .neonGameArt span{animation:neonFloat 2s ease-in-out infinite}
+.neonGameCard:nth-child(4) .neonGameArt span{animation:neonFloat 3.2s ease-in-out infinite}
+.neonGameAction{margin-top:auto;text-align:center;padding:10px 8px;border-radius:8px;background:linear-gradient(90deg,#00a6d6,#0b7db3);font-size:13px;font-weight:800;color:white}
+@keyframes neonFloat{0%,100%{transform:translateY(4px) rotate(-4deg)}50%{transform:translateY(-8px) rotate(4deg)}}
+@keyframes neonPulse{0%,100%{transform:scale(.9);filter:brightness(.85)}50%{transform:scale(1.1);filter:brightness(1.4)}}
+@media(max-width:1050px){.neonGamesGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.neonGamesShowcase{margin:16px 0 0;padding:15px}.neonGamesGrid{gap:9px}.neonGameCard{padding:10px}.neonGameTitle{font-size:13px}.neonGameArt{height:78px;font-size:42px}.neonGameAction{font-size:11px}.neonGamesShowcase h2{font-size:20px}}
+@media(prefers-reduced-motion:reduce){.neonGameArt span{animation:none!important}.neonGameCard{transition:none}}
+</style>
+</head>
 <body>
 <main class="wrap">
 <section class="hero">
@@ -403,6 +422,20 @@ background-position:center center!important;background-size:cover!important;back
   <!-- Рекламный блок временно удалён. Вернём после проверки VBIX. -->
 </div>
 
+
+<section class="neonGamesShowcase" id="neonGamesShowcase" aria-labelledby="neonGamesTitle">
+<h2 id="neonGamesTitle">🎮 НАШИ ИГРЫ — ИГРАЙ БЕСПЛАТНО</h2>
+<p class="neonGamesIntro">Выбери игру и открой полную версию в новой вкладке.</p>
+<div class="neonGamesGrid">
+<a class="neonGameCard" href="https://boss05.gitverse.site/neon-rocket/" target="_blank" rel="noopener noreferrer" aria-label="Играть бесплатно в NEON ROCKET">
+<div class="neonGameArt" aria-hidden="true"><span>🚀</span></div><div class="neonGameTitle">NEON ROCKET</div><div class="neonGameDesc">Запусти ракету!</div><div class="neonGameAction">▶ Играть бесплатно ↗</div></a>
+<a class="neonGameCard" href="https://boss05.gitverse.site/neon-mines/" target="_blank" rel="noopener noreferrer" aria-label="Играть бесплатно в NEON MINES">
+<div class="neonGameArt" aria-hidden="true"><span>💎</span></div><div class="neonGameTitle">NEON MINES</div><div class="neonGameDesc">Открывай клетки и избегай мин.</div><div class="neonGameAction">▶ Играть бесплатно ↗</div></a>
+<a class="neonGameCard" href="https://boss05.gitverse.site/neon-plinko/" target="_blank" rel="noopener noreferrer" aria-label="Играть бесплатно в NEON PLINKO">
+<div class="neonGameArt" aria-hidden="true"><span>🎰</span></div><div class="neonGameTitle">NEON PLINKO</div><div class="neonGameDesc">Запускай шарик и следи за падением.</div><div class="neonGameAction">▶ Играть бесплатно ↗</div></a>
+<a class="neonGameCard" href="https://boss05.gitverse.site/zimnyaya-rybalka/" target="_blank" rel="noopener noreferrer" aria-label="Играть бесплатно в Зимнюю рыбалку">
+<div class="neonGameArt" aria-hidden="true"><span>🎣</span></div><div class="neonGameTitle">ЗИМНЯЯ РЫБАЛКА</div><div class="neonGameDesc">Попробуй поймать свой улов!</div><div class="neonGameAction">▶ Играть бесплатно ↗</div></a>
+</div></section>
 
 <section class="viewerComments">
   <div class="commentsHead"><h2>Комментарии зрителей</h2><span>Обсуждение сериала</span></div>
